@@ -51,7 +51,7 @@ void writeAsmCommand(FILE * asm_file, token * tok, stack_list * if_stack, stack_
     // ASSEMBLY INSTRUCTIONS
 
     // altering stack
-	char *pop_one = "\tLDR R1, R6, #0\n\tADD R6, R6, #1\n";
+    char *pop_one = "\tLDR R1, R6, #0\n\tADD R6, R6, #1\n";
     char *pop_two = "\tLDR R1, R6, #0\n\tADD R6, R6, #1\n\tLDR R2, R6, #0\n\tADD R6, R6, #1\n";
     char *push_result_top = "\tADD R6, R6, #-1\n\tSTR R1, R6, #0\n";
 
