@@ -68,29 +68,10 @@ void writeAsmCommand(FILE * asm_file, token * tok, stack_list * if_stack, stack_
     char *not = "\tNOT R1, R1\n";
 
     // stack operations
-    char *swap = "\
-        \tLDR R1, R6, #0\n\
-        \tADD R6, R6, #1\n\
-        \tLDR R2, R6, #0\n\
-        \tSTR R1, R6, #0\n\
-        \tADD R6, R6, #-1\n\
-        \tSTR R2, R6, #0\n";
-    char *rot = "\
-        \tLDR R1, R6, #0\n\
-        \tADD R6, R6, #1\n\
-        \tLDR R2, R6, #0\n\
-        \tADD R6, R6, #1\n\
-        \tLDR R3, R6, #0\n\
-        \tSTR R2, R6, #0\n\
-        \tADD R6, R6, #-1\n\
-        \tSTR R1, R6, #0\n\
-        \tADD R6, R6, #-1\n\
-        \tSTR R3, R6, #0\n";
+    char *swap = "\tLDR R1, R6, #0\n\tADD R6, R6, #1\n\tLDR R2, R6, #0\n\tSTR R1, R6, #0\n\tADD R6, R6, #-1\n\tSTR R2, R6, #0\n";
+    char *rot = "\tLDR R1, R6, #0\n\tADD R6, R6, #1\n\tLDR R2, R6, #0\n\tADD R6, R6, #1\n\tLDR R3, R6, #0\n\tSTR R2, R6, #0\n\tADD R6, R6, #-1\n\tSTR R1, R6, #0\n\tADD R6, R6, #-1\n\tSTR R3, R6, #0\n";
     char *drop = "\tADD R6, R6, #1\n";
-    char *dup = "\
-        \tLDR R1, R6, #0\n\
-        \tADD R6, R6, #-1\n\
-        \tSTR R1, R6, #0\n";
+    char *dup = "\tLDR R1, R6, #0\n\tADD R6, R6, #-1\n\tSTR R1, R6, #0\n";
 
     // comparison operators
     char *less_than = "\tCMP R1, R2\n\tBRzp ";
