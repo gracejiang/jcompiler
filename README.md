@@ -2,11 +2,8 @@
 
 This is a project that converts the stack-oriented language J into assembly.
 
-<img src="assets/demo.gif" alt="demo" style="zoom:75%;" />
 
-*demo of compiler on factorial function*
-
-
+---
 
 ### Run this Project
 
@@ -33,12 +30,16 @@ This is a project that converts the stack-oriented language J into assembly.
 ```./jc filename.j```
 
 
+---
 
 
+### Demos
 
-### Bonus
+<img src="assets/demo.gif" alt="demo" style="zoom:75%;" />
 
-Merry Christmas! :-)
+*Demo of Compiler on Factorial Function*
 
 <img src="assets/xmas.gif" alt="demo" style="zoom:75%;" />
+
+*Merry Christmas! :-)*
 
